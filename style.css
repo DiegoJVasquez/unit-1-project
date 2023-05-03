@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  header{
+    margin-top: 2%;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 20px;
+    font-weight: bold;
+  }
+  #gameBoard {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 22vmin);
+    grid-template-rows: repeat(3, 22vmin);
+    gap: 1vmin;
+    margin-top: -4vmin;
+  }
+  
+  #gameBoard > div {
+    border-radius: 2;
+    border: 10px purple;
+    background-color: white;
+  }
+  h1{
+    text-align: center; 
+  
+  }
+  h2{
+    text-align: center; 
+    margin-bottom: 5%;
+  }
+  
+  body{
+    color: black;
+    text-shadow: 10px;
+    font-size: 20px;
+    height: 100vh;
+    margin: 2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://cdn.discordapp.com/attachments/973091238175711262/1103113259193733201/tic_tac_toe_game.jpg") ;
+  }
