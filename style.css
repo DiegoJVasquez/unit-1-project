@@ -3,45 +3,102 @@
   }
   
   header{
+    font-family: 'Press Start 2P', cursive;
     margin-top: 2%;
     font-size: 40px;
     text-align: center;
     text-shadow: 20px;
     font-weight: bold;
+    padding: 1.3vmin;
+    border-radius: 3.4vmin ;
+    border: solid 1.5vmin;
+    border-color:rgb(224, 206, 239);
+    color: rgb(0, 0, 0);
+    background-color:rgb(248, 235, 248)
   }
-  #gameBoard {
-    
+
+  #board {
     display: grid;
     grid-template-columns: repeat(3, 22vmin);
     grid-template-rows: repeat(3, 22vmin);
     gap: 1vmin;
     margin-top: -4vmin;
   }
-  
-  #gameBoard > div {
-    border-radius: 2;
-    border: 10px purple;
-    background-color: white;
+
+  #board > div {
+    border: solid 1.5vmin;
+    border-color:rgb(224, 206, 239);
+    color: rgb(0, 0, 0);
+    background-color:rgb(248, 235, 248);
+    border-radius: 2vmin ;
   }
+
+  #board {
+    display: grid;
+    grid-template-columns: repeat(3, 19vmin);
+    grid-template-rows: repeat(3, 18vmin);
+    gap: 0.9vmin;
+    margin-top: 3vmin;
+  }
+  
+  #board >div:hover {
+    transform: scale(1.08);
+    transition:350ms ease-in-out;
+    border: solid 1.5vmin;
+    border-color:rgb(94, 4, 167);
+    background-color:rgb(159, 138, 246);
+    border-radius: 2vmin ;
+  }
+
   h1{
-    text-align: center; 
-  
-  }
-  h2{
-    text-align: center; 
-    margin-bottom: 5%;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 4vmin;
+    text-align: center;
+    text-shadow: 25px;
+    font-weight: bold;
+    padding: 1.3vmin;
+    border-radius: 3.4vmin ;
+    border: solid 1.5vmin;
+    border-color:rgb(224, 206, 239);
+    color: rgb(0, 0, 0);
+    background-color:rgb(248, 235, 248)
   }
   
   body{
+    font-family: 'Press Start 2P', cursive;
     color: black;
-    text-shadow: 10px;
+    text-shadow: 10vmin;
     font-size: 20px;
     height: 100vh;
     margin: 2;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url("https://cdn.discordapp.com/attachments/973091238175711262/1103113259193733201/tic_tac_toe_game.jpg") ;
+  }
+
+  #playAgainBtn{
+    font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      margin-top: 0.9vmin;
+      margin-bottom: 0.9vmin;
+      padding: 0.9vmin;
+      font-size: 3vmin;
+      border: solid 0.9vmin;
+      border-color:rgb(224, 206, 239);
+      color: rgb(0, 0, 0);
+      background-color:rgb(248, 235, 248);
+      border-radius: 1.1vmin ;
+    }
+  
+  #playAgainBtn:hover {
+    color: black;
+    transform: scale(1.09);
+    transition:350ms ease-in-out;
+    border: solid 0.9vmin;
+    border-color:rgb(94, 4, 167);
+    background-color:rgb(159, 138, 246);
+    border-radius: 1.1vmin ;
   }
