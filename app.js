@@ -7,27 +7,27 @@
     [1, 4, 7],      /// vertical
     [2, 5, 8],    /// vertical
     [0, 4, 8],  /// diagnal
-    [2, 4, 6],/// diagnol 
+    [2, 4, 6],/// diagnal 
   ];
 
   const PLAYERS= {
     'null' : '',
-    '1' : 'X',                                                                            ///player 1 is X
-    '-1' : 'O',                                                                          ///player 2 is O
+    '1' : 'X',                                                                                ///player 1 is X
+    '-1' : 'O',                                                                              ///player 2 is O
   };
 
   /// variables - data that does change   ///
   let turn, winner, gameboard;
   
   ///   cached elements refrences   ///
-  const gameboardEl = document.getElementById('gameboard');
+  const gameboardEl = document.getElementById('gameboard');                              ///interface that changes
   const squareEls = document.querySelectorAll('.square');
   const messageEl = document.querySelector('h1');
   const buttonEl = document.querySelector('button');
 
 ///   EVENT LISTENER   ///
 gameboardEl.addEventListener('click', handleClick);
-buttonEl.addEventListener('click', init);
+buttonEl.addEventListener('click', init);                                           ///button to reset game
 
  ///   functions   ///
 init();                                                                            ///starts and resets the game
@@ -47,27 +47,27 @@ for(let i = 0; i < solutions.length; i++) {                                 ///c
                 return gameboard[solutions[i][0]];                      ///which is either 1 or -1 and checks if it adds to 3
               };                                                       /// returns winner
   };
- if(gameboard.includes(null)) return false;                           ///if no solution detected, return no winner or Tie
+ if(gameboard.includes(null)) return false;                               ///if no solution detected, return no winner or Tie
  return 'T';
 };
 
 function handleClick(event) {
- const position = event.target.dataset.cube;      
- if(winner || gameboard[position]) return;                                     ///stops overlapping on cubes
- gameboard[position] = turn;
+ const position = event.target.dataset.cube;                                   ///function to place down x's or o's on gameboard
+ if(winner || gameboard[position]) return;                                       ///stops overlapping on cubes
+ gameboard[position] = turn;                                                       ///switches between players
  turn *=-1;
  winner = getWinner();
  render();
 };
 
 function render() {
-  squareEls.forEach(function(square, position) {                              ///funtion to show x's and o's 
+  squareEls.forEach(function(square, position) {                                           ///funtion to show x's and o's 
    square.textContent = PLAYERS [gameboard[position]];                       
   });
-  if(!winner) {                                                               ///From here below updates the headers
-  messageEl.textContent= `Players ${PLAYERS[turn]}'s turn`;
+  if(!winner) {                                                                               ///From here below updates the headers
+  messageEl.textContent= `Player ${PLAYERS[turn]}'s turn`;
  } else if(winner === 'T') {
-  messageEl.textContent = 'Tie Game!! Play Again!';
+  messageEl.textContent = 'Tie Game!! You Must Play Again!';
  } else {
   messageEl.textContent = `Player ${PLAYERS[winner]} Wins! Congradulations!!`;      
  }
