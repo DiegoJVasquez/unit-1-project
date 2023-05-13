@@ -4,8 +4,7 @@ HERE IS MY UNIT ONE TIC TIC TOE PROJECT
 CODED IN A 2 WEEK TIME SPAN on VISUAL STUDIO CODE
 
 BELOW IS THE LINK TO THE GAME
-http://127.0.0.1:5500/
-
+https://diegojvasquez.github.io/unit-1-project/
 
 ENJOY!!!
 
